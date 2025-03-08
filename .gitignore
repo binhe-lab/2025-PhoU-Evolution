@@ -1,1 +1,6 @@
+# mac specific
 .DS_Store
+# R specific
+.Rproj.user
+.Rhistory
+.RData
