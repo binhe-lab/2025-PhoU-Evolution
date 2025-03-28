@@ -1,3 +1,4 @@
+this is a test
 This is a collaboration with Thomas Kehl-Fie and a student in his lab, Caroline Vermilya. The goal of this project is to identify homologs of two proteins central to the regulation of phosphate homeostasis in the opportunistic bacterial pathogen _S. aureus_. The two proteins' names are PhoU and PitR. More descriptions of the two proteins and their functional roles can be found in the notes in the `docs` folder (under development).
 
 The query sequences used to initiate the analysis can be found in the `data` folder. Analyses, scripts and output files are stored in their respective folders.
