@@ -9,6 +9,9 @@ date: 2025-04-02
 Cluster sequences based on similarity to remove redundancies
 
 # Notes
+## 2025-04-04, use Claude to generate an automated script
+see `20250404-cluster-sequences.sh`
+
 ## 2025-04-03, CD-HIT
 Turns out blast all against all is very inefficient. It took my macbook running the script overnight and it is still not done. Not to mention I would have to parse the resulting data to actually filter the sequence file.
 
