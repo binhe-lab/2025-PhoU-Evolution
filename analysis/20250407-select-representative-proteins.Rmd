@@ -1,0 +1,77 @@
+---
+title: "20250407-select-representative-proteins"
+author: "Bin He"
+date: "2025-04-07 updated `r Sys.Date()"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+require(seqinr)
+require(tidyverse)
+```
+
+```{r}
+# set plotting theme to theme_bw(base_size = 16) and save the current settings
+# to `old`
+old <- theme_set(theme_bw(base_size = 16))
+```
+
+## Goal
+Select 100-300 representative proteins from each of the PhoU and PitR related proteins. We will use two criteria to select:
+1. We have used `CD-HIT` to cluster both sets at 70% identity, which reduced each set to 1/4 of the original size. But this still left us ~8000 and ~5000 sequences in each set, respectively.
+2. Using the above clustered sets as the starting point, we will next select proteins based on species.
+
+## Data
+Read in the protein sequences after clustering from the `../input/fasta-sequences` folder using `seqinr` and extract the sequence names.
+```{r}
+# read in the protein sequences after clustering
+fasta_files <- list.files(path = "../data/fasta-sequences", 
+                          pattern = "*-clustered.fa$", full.names = TRUE)
+names(fasta_files) <- c("PitR", "PhoU", "NptA")
+print(fasta_files) # double check that the names and files match
+clustered_seqs <- map(fasta_files, \(f) read.fasta(f, seqtype = "AA"))
+# extract the sequence names  
+seq_names <- map(clustered_seqs, \(x) getName(x)) |>
+  # split the names by | into three columns and bind the three lists as rows
+  lapply(\(x) tibble(name = str_split(x, "\\|", simplify = TRUE)[,1])) |>
+  list_rbind(names_to = "group")
+```
+
+Read in sequence information
+```{r}
+info_files <- list.files(path = "../data/fasta-sequences", 
+                          pattern = "*-table.tsv.gz$", full.names = TRUE)
+names(info_files) <- c("PitR", "PhoU", "NptA")
+print(info_files) # double check that the names and files match
+seq_info <- map(info_files, \(f) read_tsv(f, show_col_types = FALSE)) |>
+  list_rbind(names_to = "group")
+# filter the sequences to only include those in the clustered set
+clustered_seq_info <- seq_info |>
+  filter(Accession %in% seq_names$name) |>
+  # split the `Tax Name` column into three, with the first column containing
+  # the genus and the second the species, and the remaining going to the 
+  # third column (typically strain or subspecies and other info)
+  separate_wider_delim(`Tax Name`, delim = " ",
+                        names = c("Genus", "Species", "Other"), 
+                        too_few = "align_start", too_many = "merge")
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
