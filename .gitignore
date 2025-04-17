@@ -4,5 +4,6 @@
 .Rproj.user
 .Rhistory
 .RData
+*.html
 # sandbox for testing only
 sandbox/

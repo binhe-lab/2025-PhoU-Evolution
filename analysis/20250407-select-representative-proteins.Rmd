@@ -1,7 +1,7 @@
 ---
 title: "20250407-select-representative-proteins"
 author: "Bin He"
-date: "2025-04-07 updated `r Sys.Date()"
+date: "2025-04-07 updated `r Sys.Date()`"
 output: html_document
 ---
 
@@ -56,22 +56,65 @@ clustered_seq_info <- seq_info |>
                         too_few = "align_start", too_many = "merge")
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+Because we want to make sure that the _S. aureus_ sequences are included, we will keep them in a separate table and then merge them back in later.
+```{r}
+# identify the _S. aureus_ sequences
+staph_aureus_unip_ids = c("PitR" = "A0A0H3K7D8", 
+                          "PhoU" = "A0A0H3K808",
+                          "NptA" = "A0A0H3K9X3")
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+## Select representative proteins
+Group by genus and select the first sequence in each group
+```{r}
+genus_representative <- clustered_seq_info |>
+  distinct(group, Genus, .keep_all = TRUE)
+count(genus_representative, group)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+After both `CD-HIT` clustering and species filtering, we are left with 1k and 2k sequences in the PitR and PhoU sets. 
+
+Now we will check if the _S. aureus_ representatives are in the list.
+```{r}
+# are they all in the list?
+all(staph_aureus_unip_ids %in% genus_representative$Accession)
+```
+
+Good. Now, we will generate a filtered fasta file containing the genus representative sequences for the PhoU and PitR homologs only. When exporting, we will rename the sequences to the following format:
+">Accession PhoU|PitR Genus_species CD-HIT_cluster_id"
+
+First, we identify the selected sequence accessions and filter the sequence list.
+```{r}
+# merge the PitR and PhoU related sequences, leaving out NptA
+grouped_seqs <- do.call(c, clustered_seqs[c("PitR", "PhoU")])
+
+# Filter sequences: get only those whose name matches selected accessions
+grouped_seqs_acc <- getName(grouped_seqs) |> str_split("\\|", simplify = TRUE)
+grouped_seqs_acc <- grouped_seqs_acc[,1]
+select_seqs_acc <- genus_representative |> filter(group != "NptA") |> pull(Accession)
+selected_seqs <- grouped_seqs[which(grouped_seqs_acc %in% select_seqs_acc)]
+sprintf("Selected %d sequences from %d total", length(selected_seqs), length(grouped_seqs))
+```
+Next, we rename the sequences
+```{r}
+# Convert list to a named character vector for renaming
+new_names <- genus_representative |>
+  filter(group != "NptA") |>
+  mutate(new_name = paste(Accession, group, Genus, Species, sep = " ")) |>
+  select(Accession, new_name) |>
+  deframe()
+
+# get the names of the selected sequences
+selected_seqs_acc <- getName(selected_seqs) |> str_split("\\|", simplify = TRUE)
+selected_seqs_acc <- selected_seqs_acc[,1]
+
+# check to make sure that the selected sequences are in the new names
+all(selected_seqs_acc %in% names(new_names))
+
+# export the selected sequences to a fasta file
+write.fasta(sequences = selected_seqs, 
+            names = new_names[selected_seqs_acc], 
+            file.out = "../data/fasta-sequences/20250417-representative-proteins.fa")
+```
+
