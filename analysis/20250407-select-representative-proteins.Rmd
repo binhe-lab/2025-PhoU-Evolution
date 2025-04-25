@@ -66,6 +66,7 @@ staph_aureus_unip_ids = c("PitR" = "A0A0H3K7D8",
 
 
 ## Select representative proteins
+### For CLANS
 Group by genus and select the first sequence in each group
 ```{r}
 genus_representative <- clustered_seq_info |>
@@ -81,7 +82,14 @@ Now we will check if the _S. aureus_ representatives are in the list.
 all(staph_aureus_unip_ids %in% genus_representative$Accession)
 ```
 
-Good. Now, we will generate a filtered fasta file containing the genus representative sequences for the PhoU and PitR homologs only. When exporting, we will rename the sequences to the following format:
+Good. Let's export the list of representative sequences to a tsv file.
+```{r}
+write_tsv(genus_representative, 
+          file = "../data/fasta-sequences/20250417-representative-proteins.tsv")
+```
+
+
+Now, we will generate a filtered fasta file containing the genus representative sequences for the PhoU and PitR homologs only. When exporting, we will rename the sequences to the following format:
 ">Accession PhoU|PitR Genus_species CD-HIT_cluster_id"
 
 First, we identify the selected sequence accessions and filter the sequence list.
@@ -118,3 +126,61 @@ write.fasta(sequences = selected_seqs,
             file.out = "../data/fasta-sequences/20250417-representative-proteins.fa")
 ```
 
+### For gene tree
+We will randomly select 100 and 200 proteins from the PitR and PhoU sets, respectively. We will also include the _S. aureus_ sequences in the list.
+```{r}
+# randomly select 100 and 200 proteins from the PitR and PhoU sets, respectively
+set.seed(20250407)
+# PitR
+pitr_representative <- clustered_seq_info |>
+  filter(group == "PitR") |>
+  filter(!Accession %in% staph_aureus_unip_ids) |>
+  slice_sample(n = 100)
+# PhoU
+phou_representative <- clustered_seq_info |>
+  filter(group == "PhoU") |>
+  filter(!Accession %in% staph_aureus_unip_ids) |>
+  slice_sample(n = 200)
+# Combine the two with the S. aureus sequences
+seq_for_tree <- bind_rows(
+  pitr_representative, phou_representative,
+  # add the _S. aureus_ sequences
+  clustered_seq_info |>
+    filter(Accession %in% staph_aureus_unip_ids)) |>
+  # remove the NptA sequences
+  filter(group != "NptA")
+```
+
+Write the selected sequences to a tsv file
+```{r}
+write_tsv(seq_for_tree, 
+          file = "../data/fasta-sequences/20250425-select-proteins-for-tree.tsv")
+```
+
+Next, we will generate a filtered fasta file containing the selected sequences for the PhoU and PitR homologs only. When exporting, we will rename the sequences to the following format:
+```{r}
+# Filter sequences: get only those whose name matches selected accessions
+tree_seqs_acc <- seq_for_tree$Accession
+tree_seqs <- grouped_seqs[which(grouped_seqs_acc %in% tree_seqs_acc)]
+sprintf("Selected %d sequences from %d total", length(tree_seqs), length(grouped_seqs))
+```
+Next, we rename the sequences
+```{r}
+# Convert list to a named character vector for renaming
+new_names_tree <- seq_for_tree |>
+  mutate(new_name = paste(Accession, group, Genus, Species, sep = " ")) |>
+  select(Accession, new_name) |>
+  deframe()
+
+# get the names of the selected sequences
+tree_seqs_acc <- getName(tree_seqs) |> str_split("\\|", simplify = TRUE)
+tree_seqs_acc <- tree_seqs_acc[,1]
+
+# check to make sure that the selected sequences are in the new names
+all(tree_seqs_acc %in% names(new_names_tree))
+
+# export the selected sequences to a fasta file
+write.fasta(sequences = tree_seqs, 
+            names = new_names_tree[tree_seqs_acc], 
+            file.out = "../data/fasta-sequences/20250425-select-proteins-for-tree.fa")
+```
