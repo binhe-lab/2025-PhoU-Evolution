@@ -1,0 +1,1 @@
+`20250426-select-protein-for-tree-MAFFT-E-INS-i-multidomain-align.fasta`: used MAFFT Galaxy Version 7.526+galaxy1 on <usegalaxy.org> to align the `../fasta-sequences/20250425-select-proteins-for-tree.fa`. Using the E-INS-i algorithm optimized for divergent sequences with multiple conserved domains.

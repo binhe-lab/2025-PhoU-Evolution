@@ -1,0 +1,71 @@
+
+
+This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 759 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 77.33%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+ML estimate of 25 per site rate categories
+
+Likelihood of final tree will be evaluated and optimized under GAMMA
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 759
+Name: No Name Provided
+DataType: AA
+Substitution Matrix: DAYHOFF
+Using fixed base frequencies
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS -T 16 -s /jetstream2/scratch/main/jobs/67165567/inputs/dataset_3e205436-d90a-4eae-b7a1-e201dcf68d8c.dat -n galaxy -m PROTCATDAYHOFF -p 1234567890 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.087 0.041 0.040 0.047 0.033 0.038 0.050 0.089 0.034 0.037 0.085 0.080 0.015 0.040 0.051 0.070 0.059 0.010 0.030 0.065 
+
+Inference[0]: Time 920.573770 CAT-based likelihood -133789.740991, best rearrangement setting 20
+alpha[0]: 1.000000 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -134350.829285 tree written to file /jetstream2/scratch/main/jobs/67165567/working/RAxML_result.galaxy
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -134350.829285 .... 
+
+Final GAMMA-based Score of best tree -134343.964247
+
+Program execution info written to /jetstream2/scratch/main/jobs/67165567/working/RAxML_info.galaxy
+Best-scoring ML tree written to: /jetstream2/scratch/main/jobs/67165567/working/RAxML_bestTree.galaxy
+
+Overall execution time: 1133.475058 secs or 0.314854 hours or 0.013119 days
+

@@ -6,6 +6,8 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+require(ggtree)
+require(treeio)
 require(seqinr)
 require(tidyverse)
 ```
@@ -183,4 +185,67 @@ all(tree_seqs_acc %in% names(new_names_tree))
 write.fasta(sequences = tree_seqs, 
             names = new_names_tree[tree_seqs_acc], 
             file.out = "../data/fasta-sequences/20250425-select-proteins-for-tree.fa")
+```
+
+
+## Plot gene tree
+The above selected protein sequences were aligned using MAFFT V7.526 with the E-INS-i algorithm optimized for divergent sequences with multiple conserved domains. I also tried MSAprobs and the result looked superficially similar.
+
+Gene tree reconstruction was performed using RAXML v8.2.12 on the Galaxy server. I used "LG+G" as the protein substitution model and matrix. I chose the `-f` option to run a rapid bootstrap, but the result is not in the output. If we want the bootstrap values, I can get it by running the program locally.
+
+First import the species tree
+```{r}
+gene_tree <- read.tree("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree.nwk") %>% 
+  as_tibble() %>% 
+  #mutate(label = gsub("_", " ", label)) %>% 
+  left_join(seq_for_tree, by = c("label" = "Accession")) %>% 
+  as.treedata()
+```
+
+plot the tree
+```{r}
+p.tree <- ggtree(gene_tree, layout = "equal_angle") + #xlim(0,2.2) + scale_y_reverse() +
+  geom_tiplab(aes(subset = label %in% c("A0A0H3K808", "A0A0H3K7D8"), 
+                  angle = angle, label = paste("S. aureus", group, sep = " ")), 
+              size = 3.5, geom = "label") +
+  #geom_treescale(x = 0, width = 0.2, linesize = 1.2) +
+  geom_tippoint(aes(color = group), size = 1.5) +
+  scale_color_manual("Group", values =  c("PhoU" = "#6a5acd",
+                                 "PitR" = "#d14949")) +
+  #guides(color = guide_legend(byrow = TRUE)) +
+  theme(legend.position = c(0.12, 0.13),
+        legend.title = element_text(size = rel(1.2)),
+        legend.text = element_text(size = rel(1.2)))
+p.tree
+ggsave("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree.pdf", 
+       p.tree, width = 8, height = 8)
+```
+
+I made a second tree using `PROTCAT` as the model and `DAYHOFF` as the matrix. I'd like to see whether the result is robust to these choices.
+
+```{r}
+gene_tree_2 <- read.tree("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTCAT-Dayhoff-best-ML-tree.nwk") %>% 
+  as_tibble() %>% 
+  #mutate(label = gsub("_", " ", label)) %>% 
+  left_join(seq_for_tree, by = c("label" = "Accession")) %>% 
+  as.treedata()
+```
+
+plot the tree
+```{r}
+p.tree.2 <- ggtree(gene_tree_2, layout = "equal_angle") + #xlim(0,2.2) + scale_y_reverse() +
+  geom_tiplab(aes(subset = label %in% c("A0A0H3K808", "A0A0H3K7D8"), 
+                  angle = angle, label = paste("S. aureus", group, sep = " ")), 
+              size = 3.5, geom = "label") +
+  #geom_treescale(x = 0, width = 0.2, linesize = 1.2) +
+  geom_tippoint(aes(color = group), size = 1.5) +
+  scale_color_manual("Group", values =  c("PhoU" = "#6a5acd",
+                                 "PitR" = "#d14949")) +
+  #guides(color = guide_legend(byrow = TRUE)) +
+  theme(legend.position = c(0.12, 0.13),
+        legend.title = element_text(size = rel(1.2)),
+        legend.text = element_text(size = rel(1.2)))
+p.tree.2
+ggsave("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTCAT-Dayhoff-best-ML-tree.pdf", 
+       p.tree.2, width = 8, height = 8)
 ```
