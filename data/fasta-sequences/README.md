@@ -1,3 +1,6 @@
+## 2025-04-30
+I downloaded the table from the PhoU_div (PF01865) page, selecting the top of the 30 domain architecture classes, with just the focal domain and no other domains. This is the one SaPitR belongs to. I'd like to verify that this is the same as the `InterPro-similar-to-A0A0H3K7D8-PitR-2.1k-table.tsv.gz`
+
 ## 2025-04-03
 Used `CD-HIT` to deduplicate the three files downloaded below. See `../../script/20250402-cluster-seq.md` for details.
 
