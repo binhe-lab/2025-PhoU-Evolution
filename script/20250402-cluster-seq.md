@@ -25,6 +25,8 @@ I remember reading about a different approach used by NCBI to create their nr da
 
 I also renamed the files to make them easeier to track. The program is indeed super fast, taking less than a second per file...
 
+After testing a few cutoffs, I settled on 0.7 as the threshold. This is arbitrarily chosen so I have a reasonably sized dataset (~1/4 of the sequences left). Lower threshold will result in failures. Using 80% or above will result in >10,000 sequences for PhoU related proteins alone.
+
 ## 2025-04-02, BLAST
 Try using BLAST all against all to calculate pairwise sequence similarity. Got the code working with help from Claude Code
 
