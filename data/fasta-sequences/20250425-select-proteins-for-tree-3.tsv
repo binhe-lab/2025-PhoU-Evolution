@@ -1,0 +1,303 @@
+group	Accession	Source Database	Name	Tax ID	Genus	Species	Other	Length
+PitR	A0A7W7S6L9	unreviewed	DUF47 domain-containing protein	47479	Streptosporangium	album	NA	210
+PitR	A0A1M3BEH8	unreviewed	Phosphate transport regulator	1895742	Chlamydia	sp.	32-24	208
+PitR	A0A1G0H8M8	unreviewed	Phosphate transport regulator	1798283	Gammaproteobacteria	bacterium	RIFCSPHIGHO2_12_FULL_41_20	208
+PitR	A0A962PR37	unreviewed	TIGR00153 family protein	1891229	Pseudomonadales	bacterium	NA	169
+PitR	A0A1A9NHU8	unreviewed	Phosphate transport regulator	1848039	Methylobacillus	sp.	MM3	213
+PitR	A0A1G0AKL0	unreviewed	Phosphate transport regulator	1797984	Euryarchaeota	archaeon	RBG_19FT_COMBO_69_17	209
+PitR	A0A1Q6Z2Y5	unreviewed	Phosphate transport regulator	1805233	Ktedonobacter	sp.	13_2_20CM_53_11	212
+PitR	A0A523AP32	unreviewed	DUF47 domain-containing protein	2250530	Archaeoglobi	archaeon	NA	201
+PitR	A0A524DCQ0	unreviewed	DUF47 family protein	2053489	Promethearchaeota	archaeon	NA	213
+PitR	A0A1M3K9B2	unreviewed	Phosphate transport regulator	1895927	Chloroflexi	bacterium	44-23	206
+PitR	U7UUS6	unreviewed	PF01865 family protein	1111134	Peptoniphilus	sp.	BV3C26	206
+PitR	A0A0S7XX72	unreviewed	Phosphate transport regulator	1703361	Syntrophobacter	sp.	DG_60	221
+PitR	A0A497CZX2	unreviewed	DUF47 family protein	1898104	Bacteroidota	bacterium	NA	272
+PitR	A0A5C9EEK6	unreviewed	DUF47 family protein	2053489	Promethearchaeota	archaeon	NA	209
+PitR	A0A135VP76	unreviewed	PhoU domain-containing protein	1706444	Candidatus	Thorarchaeota	archaeon SMTZ1-45	220
+PitR	A0A4R6RAD1	unreviewed	Phosphate transport regulator	70586	Aquabacterium	commune	NA	227
+PitR	A0A524CQ89	unreviewed	DUF47 family protein	2053489	Promethearchaeota	archaeon	NA	186
+PitR	A0A7V2PSM5	unreviewed	DUF47 family protein	2052143	Anaerolineae	bacterium	NA	214
+PitR	A0A7W1GKE9	unreviewed	DUF47 domain-containing protein	1883427	Actinomycetes	bacterium	NA	204
+PitR	A0A960KHG8	unreviewed	TIGR00153 family protein	1978231	Acidobacteriota	bacterium	NA	233
+PitR	A0A2N2GX73	unreviewed	DUF47 domain-containing protein	2013750	Deltaproteobacteria	bacterium	HGW-Deltaproteobacteria-22	217
+PitR	A0A2N2DR64	unreviewed	DUF47 domain-containing protein	2013772	Firmicutes	bacterium	HGW-Firmicutes-11	206
+PitR	A0A2D6D0M4	unreviewed	TIGR00153 family protein	2026781	Poribacteria	bacterium	NA	226
+PitR	A0A843D7M2	unreviewed	DUF47 domain-containing protein	2682607	Methanocorpusculaceae	archaeon	NA	209
+PitR	A0A955CKL8	unreviewed	TIGR00153 family protein	2053591	Planctomycetales	bacterium	NA	224
+PitR	A0A349UN29	unreviewed	TIGR00153 family protein	2052180	Phycisphaerales	bacterium	NA	239
+PitR	A0A948W7Y8	unreviewed	TIGR00153 family protein	2212470	Eisenbacteria	bacterium	NA	224
+PitR	A0A7J4F8A9	unreviewed	TIGR00153 family protein	1906666	Thermoplasmata	archaeon	NA	226
+PitR	A0A1G9Y9K4	unreviewed	Phosphate transport regulator (Distant homolog of PhoU)	349095	Megasphaera	paucivorans	NA	208
+PitR	A0A7Z9Y2U3	unreviewed	DUF47 domain-containing protein	2052143	Anaerolineae	bacterium	NA	214
+PitR	A0A925V470	unreviewed	DUF47 domain-containing protein	2545255	Nannocystaceae	bacterium	NA	212
+PitR	A0A1F4QYP2	unreviewed	TIGR00153 family protein	1798559	candidate	division	KSB1 bacterium RBG_16_48_16	217
+PitR	A0A7V9RIF3	unreviewed	DUF47 domain-containing protein	1909295	Solirubrobacterales	bacterium	NA	206
+PitR	A0A3E0KSY5	unreviewed	DUF47 domain-containing protein	1879010	Bacillota	bacterium	NA	206
+PitR	A0A2E4HPX5	unreviewed	Phosphate transport regulator	2026795	Nitrososphaerota	archaeon	NA	208
+PitR	A0A959G765	unreviewed	DUF47 domain-containing protein	2202734	Saprospiraceae	bacterium	NA	197
+PitR	A0A496YA58	unreviewed	DUF47 domain-containing protein	2026735	Deltaproteobacteria	bacterium	NA	205
+PitR	A0A3N5JWN1	unreviewed	DUF47 domain-containing protein	2026749	Ignavibacteriota	bacterium	NA	215
+PitR	A0A078KR51	unreviewed	Putative phosphate transport regulator	29343	[Clostridium]	cellulosi	NA	207
+PitR	A0A1B3WD67	unreviewed	Uncharacterized protein	39950	Dialister	pneumosintes	NA	205
+PitR	A0A011Q9H6	unreviewed	Putative pit accessory protein	522306	Accumulibacter	regalis	NA	211
+PitR	A0A7C3Y8H3	unreviewed	DUF47 family protein	2026714	Candidatus	Bathyarchaeota	archaeon	223
+PitR	E1RJ83	unreviewed	Putative phosphate transport regulator	679926	Methanolacinia	petrolearia	(strain DSM 11571 / OCM 486 / SEBR 4847)	204
+PitR	A0A1M4VQZ0	unreviewed	Phosphate transport regulator	112248	Seinonella	peptonophila	NA	206
+PitR	A0A7W8M6W5	unreviewed	Pit accessory protein	673271	Catenibacillus	scindens	NA	207
+PitR	A0A7J4S201	unreviewed	DUF47 family protein	1906666	Thermoplasmata	archaeon	NA	209
+PitR	A0A075FWV2	unreviewed	Phosphate uptake regulator	1455933	uncultured	marine	thaumarchaeote AD1000_70_C10	209
+PitR	A0A924STQ1	unreviewed	DUF47 domain-containing protein	2599941	Oligoflexia	bacterium	NA	208
+PitR	A0A7X7LE87	unreviewed	DUF47 family protein	1869227	bacterium	NA	NA	222
+PitR	A0A830FN77	unreviewed	DUF47 family protein	1383812	Halocalculus	aciditolerans	NA	219
+PitR	A0A7L4PMX7	unreviewed	DUF47 family protein	2099674	Candidatus	Methanofastidiosia	archaeon	215
+PitR	A0A840MPI9	unreviewed	DUF47 domain-containing protein	714531	Chitinivorax	tropicus	NA	213
+PitR	A0A359LUP8	unreviewed	DUF47 domain-containing protein	2026791	Bryobacterales	bacterium	NA	204
+PitR	A0A7X9P4J4	unreviewed	DUF47 family protein	2026792	Spirochaetales	bacterium	NA	228
+PitR	A0A849GQH7	unreviewed	TIGR00153 family protein	1980636	Woeseia	sp.	NA	225
+PitR	A0A524DYF4	unreviewed	DUF47 family protein	2053489	Promethearchaeota	archaeon	NA	218
+PitR	A0A7V2JEB5	unreviewed	TIGR00153 family protein	2268206	Thermotogaceae	bacterium	NA	222
+PitR	B8D4G5	unreviewed	Phosphate transport system-like protein	490899	Desulfurococcus	amylolyticus	(strain DSM 18924 / JCM 16383 / VKM B-2413 / 1221n)	221
+PitR	A0A084DEG8	unreviewed	Phosphate transport regulator	1506588	Burkholderia	sp.	MSh2	208
+PitR	A0A256ZAC5	unreviewed	Phosphate transport regulator	2012517	Desulfurococcales	archaeon	ex4484_204	159
+PitR	A0A8T7GJ43	unreviewed	DUF47 family protein	2169593	Nitrososphaeraceae	archaeon	NA	212
+PitR	A0A075WXR2	unreviewed	TIGR00153 family protein	289377	Thermodesulfobacterium	commune	DSM 2178	218
+PitR	A0A357NHN7	unreviewed	DUF47 domain-containing protein	1879010	Bacillota	bacterium	NA	209
+PitR	A0A0L6U2A6	unreviewed	PhoU family transcriptional regulator	52689	Acetobacterium	bakii	NA	206
+PitR	A0A1I0LPZ7	unreviewed	DUF47 family protein	568860	Nonomuraea	wenchangensis	NA	207
+PitR	A0A3N5GS65	unreviewed	DUF47 domain-containing protein	1978231	Acidobacteriota	bacterium	NA	206
+PitR	A0A8J6YD95	unreviewed	DUF47 domain-containing protein	1958788	Quinella	sp.	1Q5	222
+PitR	F7V5G6	unreviewed	Phosphate transport regulator	1042156	Clostridium	sp.	(strain SY8519)	206
+PitR	A0A3D6BYH0	unreviewed	TIGR00153 family protein	2049433	Desulfobacteraceae	bacterium	NA	217
+PitR	A0A7V0JW97	unreviewed	TIGR00153 family protein	2053493	Candidatus	Acetothermia	bacterium	223
+PitR	A0A842RY61	unreviewed	DUF47 family protein	2053489	Promethearchaeota	archaeon	NA	227
+PitR	A0A7J3DBC6	unreviewed	DUF47 family protein	2268195	Methanomicrobia	archaeon	NA	224
+PitR	A0A7V2SSK2	unreviewed	TIGR00153 family protein	1914300	Oceanospirillales	bacterium	NA	225
+PitR	A0A962PRY9	unreviewed	DUF47 domain-containing protein	1891229	Pseudomonadales	bacterium	NA	239
+PitR	A0A536YY30	unreviewed	DUF47 family protein	1891241	Betaproteobacteria	bacterium	NA	290
+PitR	A0A0S8BXG4	unreviewed	Phosphate transport regulator	1703407	Myxococcales	bacterium	SG8_38	215
+PitR	A0A842U9N9	unreviewed	DUF47 family protein	2053489	Promethearchaeota	archaeon	NA	227
+PitR	A0A9X3IZ00	unreviewed	DUF47 domain-containing protein	889268	Nannocystis	pusilla	NA	206
+PitR	A0A2G6J2N0	unreviewed	DUF47 domain-containing protein	1977087	Pseudomonadota	bacterium	NA	226
+PitR	A0A660T0T5	unreviewed	DUF47 family protein	2202144	Spirochaetota	bacterium	NA	122
+PitR	A0A023WSF1	unreviewed	Phosphate transport regulator	316	Stutzerimonas	stutzeri	NA	225
+PitR	A0A9D6Z183	unreviewed	TIGR00153 family protein	2358	Desulfomonile	tiedjei	NA	222
+PitR	A0A1F6CW93	unreviewed	Phosphate transport regulator	1817868	Handelsmanbacteria	sp.	(strain RIFCSPLOWO2_12_FULL_64_10)	207
+PitR	A0A9E5WUB0	unreviewed	TIGR00153 family protein	2026780	Planctomycetota	bacterium	NA	279
+PitR	A0A953NR15	unreviewed	DUF47 domain-containing protein	2081523	Terriglobia	bacterium	NA	209
+PitR	A0A172RWS0	unreviewed	Phosphate transport regulator (Distant homolog of PhoU)	79604	Denitrobacterium	detoxificans	NA	209
+PitR	A0A0S7ZNF4	unreviewed	Phosphate transport regulator	1704237	Spirochaetes	bacterium	DG_61	234
+PitR	A0A7J2Y684	unreviewed	DUF47 domain-containing protein	2026739	Methanobacteriota	archaeon	NA	209
+PitR	A0A1G0E7Q7	unreviewed	TIGR00153 family protein	1798261	Gammaproteobacteria	bacterium	GWE2_37_16	225
+PitR	A0A497RJC4	unreviewed	TIGR00153 family protein	2250258	Archaeoglobales	archaeon	NA	227
+PitR	A0A2N3LPR9	unreviewed	DUF47 domain-containing protein	1707093	Heyndrickxia	camelliae	NA	206
+PitR	A0A1M5MLL5	unreviewed	Phosphate transport regulator	1123382	Thermosyntropha	lipolytica	DSM 11003	210
+PitR	A0A950BQ04	unreviewed	DUF47 domain-containing protein	3107663	Vulcanimicrobiota	bacterium	NA	206
+PitR	A0A3E0KJB9	unreviewed	TIGR00153 family protein	1879010	Bacillota	bacterium	NA	267
+PitR	A0A1I5YJB8	unreviewed	Phosphate transport regulator	1465490	Parafilimonas	terrae	NA	215
+PitR	X1L134	unreviewed	Phosphate transport regulator	412755	marine	sediment	metagenome	213
+PitR	A0A2N2UUB2	unreviewed	DUF47 domain-containing protein	2013702	Betaproteobacteria	bacterium	HGW-Betaproteobacteria-11	212
+PitR	A0A7Y5NVI7	unreviewed	DUF47 family protein	2268199	Polyangiaceae	bacterium	NA	212
+PitR	A0A958WI27	unreviewed	DUF47 family protein	2099675	Cyclobacteriaceae	bacterium	NA	218
+PitR	A0A7K3L0W0	unreviewed	DUF47 family protein	2304571	Enterorhabdus	sp.	P55	209
+PhoU	A0A7G1G5B6	unreviewed	Phosphate-specific transport system accessory protein PhoU	2108365	Tepiditoga	spiralis	NA	220
+PhoU	A0A2N1PWH2	unreviewed	PhoU domain-containing protein	2013849	Tenericutes	bacterium	HGW-Tenericutes-6	309
+PhoU	A0A832AUH3	unreviewed	PhoU domain-containing protein	2212472	Helicobacteraceae	bacterium	NA	222
+PhoU	Z9JRW1	unreviewed	Phosphate-specific transport system accessory protein PhoU	396014	Brachybacterium	phenoliresistens	NA	224
+PhoU	A0A4Q9KGL1	unreviewed	Phosphate-specific transport system accessory protein PhoU	1837344	Propioniciclava	sinopodophylli	NA	221
+PhoU	A0A938EGX1	unreviewed	Phosphate-specific transport system accessory protein PhoU	2900548	Actinomycetota	bacterium	NA	222
+PhoU	A0A2D9GM58	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026724	Chloroflexota	bacterium	NA	224
+PhoU	A0A553ZXU3	unreviewed	Phosphate-specific transport system accessory protein PhoU	2597270	Alkalicoccobacillus	porphyridii	NA	216
+PhoU	A0A1A2YVE5	unreviewed	PhoU domain-containing protein	487514	Mycobacterium	kyorinense	NA	232
+PhoU	A0A1V4MTV4	unreviewed	Phosphate-specific transport system accessory protein PhoU	1775674	Candidatus	Aegiribacteria	sp. MLS_C	217
+PhoU	A0A4R4A595	unreviewed	Phosphate-specific transport system accessory protein PhoU	1048	Marichromatium	gracile	NA	221
+PhoU	A0A1Y3PGU4	unreviewed	Phosphate-specific transport system accessory protein PhoU	230954	Bacillus	thermozeamaize	NA	218
+PhoU	A0A355W7E5	unreviewed	Phosphate-specific transport system accessory protein PhoU	2049433	Desulfobacteraceae	bacterium	NA	219
+PhoU	A0A1F9X1L5	unreviewed	Phosphate-specific transport system accessory protein PhoU	1797958	Elusimicrobia	bacterium	RIFOXYA2_FULL_40_6	227
+PhoU	A0A8J7T126	unreviewed	Phosphate-specific transport system accessory protein PhoU	2589116	Candidatus	Odyssella	sp.	241
+PhoU	A0A1I0X3A8	unreviewed	Phosphate-specific transport system accessory protein PhoU	490629	Amycolatopsis	marina	NA	226
+PhoU	A0A3M1G2N5	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026887	Nitrospirota	bacterium	NA	232
+PhoU	A0A3D6B314	unreviewed	PhoU domain-containing protein	2049048	Rikenellaceae	bacterium	NA	358
+PhoU	A0A143X508	unreviewed	Phosphate-specific transport system accessory protein PhoU	1780379	Clostridiales	bacterium	CHKCI006	213
+PhoU	A0A3C0TV89	unreviewed	Phosphate-specific transport system accessory protein PhoU	1913988	Alphaproteobacteria	bacterium	NA	240
+PhoU	A0A5N9HFU4	unreviewed	Phosphate-specific transport system accessory protein PhoU	2030829	SAR202	cluster	bacterium	224
+PhoU	A0A011NTQ7	unreviewed	PhoU domain-containing protein	1454003	Candidatus	Accumulibacter	appositus	361
+PhoU	A0A936DY25	unreviewed	Phosphate-specific transport system accessory protein PhoU	1913989	Gammaproteobacteria	bacterium	NA	239
+PhoU	A0A970AXR6	unreviewed	Phosphate-specific transport system accessory protein PhoU	2704936	Candidatus	Fonsibacter	sp. PEL55	224
+PhoU	A0A971UD93	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026779	Planctomycetaceae	bacterium	NA	218
+PhoU	A0A5E4IGF8	unreviewed	Phosphate-specific transport system accessory protein PhoU	115547	Uncultured	archaeon	NA	221
+PhoU	A0A2N5K375	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026724	Chloroflexota	bacterium	NA	218
+PhoU	A0A2I1RHV7	unreviewed	Phosphate-specific transport system accessory protein PhoU	34062	Moraxella	osloensis	NA	256
+PhoU	A0A7J4KKL5	unreviewed	Phosphate-specific transport system accessory protein PhoU	2485498	Methanoregulaceae	archaeon	NA	220
+PhoU	A0A7C5KEV7	unreviewed	Phosphate-specific transport system accessory protein PhoU	184064	Thermodesulfobium	narugense	NA	221
+PhoU	A0A1V6H1W2	unreviewed	Phosphate-specific transport system accessory protein PhoU	1852927	Verrucomicrobia	bacterium	ADurb.Bin070	241
+PhoU	A0A965CBR7	unreviewed	PhoU domain-containing protein	1873462	Microbacteriaceae	bacterium	NA	216
+PhoU	A0A2H5V6I4	unreviewed	PhoU domain-containing protein	2035439	archaeon	HR03	NA	210
+PhoU	A0A7X9IEX0	unreviewed	Phosphate-specific transport system accessory protein PhoU	2053527	Candidatus	Zixiibacteriota	bacterium	227
+PhoU	A0A067A388	unreviewed	Phosphate-specific transport system accessory protein PhoU	28885	Hydrogenovibrio	marinus	NA	246
+PhoU	A0A2E8WFH0	unreviewed	PhoU domain-containing protein	2026742	Gemmatimonadota	bacterium	NA	209
+PhoU	A0A286RDJ4	unreviewed	Phosphate-specific transport system accessory protein PhoU	1331910	Thermogutta	terrifontis	NA	225
+PhoU	A0A2N1QTA8	unreviewed	Phosphate-specific transport system accessory protein PhoU	2013842	Synergistetes	bacterium	HGW-Synergistetes-1	229
+PhoU	A0A2Z5TG90	unreviewed	Phosphate-specific transport system accessory protein PhoU	1763363	cyanobacterium	endosymbiont	of Rhopalodia gibberula	243
+PhoU	A0A8S9WCZ8	unreviewed	PhoU domain-containing protein	2056316	Methanophagales	archaeon	NA	225
+PhoU	A0A832H7F4	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026801	Verrucomicrobiales	bacterium	NA	220
+PhoU	R5LVL4	unreviewed	Phosphate-specific transport system accessory protein PhoU	1262921	Prevotella	sp.	CAG:1185	238
+PhoU	A0A1G8PK80	unreviewed	Phosphate-specific transport system accessory protein PhoU	1882833	Frankineae	bacterium	MT45	222
+PhoU	E7C6I8	unreviewed	Phosphate-specific transport system accessory protein PhoU	723575	uncultured	gamma	proteobacterium HF0770_07M15	212
+PhoU	A0A933BRL7	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026769	Nitrospinota	bacterium	NA	230
+PhoU	A0A7X8ESI4	unreviewed	Phosphate-specific transport system accessory protein PhoU	3100283	Candidatus	Epulonipiscium	sp.	218
+PhoU	A0A9E3DHG9	unreviewed	Phosphate-specific transport system accessory protein PhoU	2052142	Acidobacteriaceae	bacterium	NA	225
+PhoU	A0A1H1KMW5	unreviewed	Phosphate-specific transport system accessory protein PhoU	1884352	Rhizobiales	bacterium	GAS113	237
+PhoU	A0A926BQD6	unreviewed	PhoU domain-containing protein	2033014	Armatimonadota	bacterium	NA	210
+PhoU	A0A660PIW5	unreviewed	PhoU domain-containing protein	2053527	Candidatus	Zixiibacteriota	bacterium	226
+PhoU	A0A6I2X9G2	unreviewed	Phosphate-specific transport system accessory protein PhoU	1883427	Actinomycetes	bacterium	NA	215
+PhoU	A0A7V3RDM8	unreviewed	PhoU domain-containing protein	1495039	Mesoaciditoga	lauensis	NA	244
+PhoU	A0A3D3HG86	unreviewed	PhoU domain-containing protein	2030927	Bacteroidales	bacterium	NA	235
+PhoU	A0A2V9NPG7	unreviewed	PhoU domain-containing protein	1978231	Acidobacteriota	bacterium	NA	241
+PhoU	A0A9E2VQ58	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026780	Planctomycetota	bacterium	NA	247
+PhoU	A0A957N6V4	unreviewed	Phosphate-specific transport system accessory protein PhoU	2614250	Caldilineaceae	bacterium	NA	226
+PhoU	A0A1J5RND0	unreviewed	PhoU domain-containing protein	410659	mine	drainage	metagenome	233
+PhoU	A0A953BT91	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026777	Phycisphaeraceae	bacterium	NA	250
+PhoU	A0A538D4R7	unreviewed	Phosphate-specific transport system accessory protein PhoU	1883427	Actinomycetes	bacterium	NA	242
+PhoU	A0A954VVD2	unreviewed	Phosphate-specific transport system accessory protein PhoU	2053591	Planctomycetales	bacterium	NA	230
+PhoU	A0A3R7XJ97	unreviewed	PhoU domain-containing protein	768733	Methanosalsum	natronophilum	NA	286
+PhoU	A0A366HEX9	unreviewed	PhoU domain-containing protein	645616	Eoetvoesiella	caeni	NA	230
+PhoU	B2A0K6	unreviewed	Phosphate-specific transport system accessory protein PhoU	457570	Natranaerobius	thermophilus	(strain ATCC BAA-1301 / DSM 18059 / JW/NM-WN-LF)	216
+PhoU	A0A1F2XB52	unreviewed	Phosphate-specific transport system accessory protein PhoU	1797204	Actinobacteria	bacterium	RBG_16_68_21	223
+PhoU	W6K597	unreviewed	Phosphate-specific transport system accessory protein PhoU	1288970	Magnetospira	sp.	(strain QH-2)	234
+PhoU	A0A1D2RCP8	unreviewed	Phosphate-specific transport system accessory protein PhoU	1849261	Candidatus	Altiarchaeales	archaeon WOR_SM1_SCG	218
+PhoU	A0A838UR24	unreviewed	PhoU domain-containing protein	2306968	Ktedonobacterales	bacterium	NA	215
+PhoU	A0A925SFY9	unreviewed	PhoU domain-containing protein	2053594	Prolixibacteraceae	bacterium	NA	239
+PhoU	A0A1R0FCE8	unreviewed	Phosphate-specific transport system accessory protein PhoU	1686310	Bartonella	apis	NA	240
+PhoU	A0A7V1ZTH8	unreviewed	Phosphate-specific transport system accessory protein PhoU	2053527	Candidatus	Zixiibacteriota	bacterium	222
+PhoU	A0A2R6D5X5	unreviewed	Phosphate-specific transport system accessory protein PhoU	1919157	Halobacteriales	archaeon	QH_7_65_31	226
+PhoU	A0A1F2YAY1	unreviewed	Phosphate-specific transport system accessory protein PhoU	1797208	Actinobacteria	bacterium	RBG_19FT_COMBO_70_19	229
+PhoU	A0A7V3RZ26	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026735	Deltaproteobacteria	bacterium	NA	222
+PhoU	A0A219B6I7	unreviewed	Phosphate-specific transport system accessory protein PhoU	1234595	Pacificimonas	flava	NA	239
+PhoU	A0A143YAE7	unreviewed	Phosphate-specific transport system accessory protein PhoU	640938	Trichococcus	ilyis	NA	224
+PhoU	A0A7V6W6P3	unreviewed	Phosphate-specific transport system accessory protein PhoU	1898204	Clostridiaceae	bacterium	NA	231
+PhoU	A0A971LGH7	unreviewed	Phosphate-specific transport system accessory protein PhoU	1898204	Clostridiaceae	bacterium	NA	222
+PhoU	A0A3A8ZG65	unreviewed	Phosphate-specific transport system accessory protein PhoU	2320099	bacterium	0.1xD8-71	NA	217
+PhoU	A0A2P5LW15	unreviewed	Phosphate-specific transport system accessory protein PhoU	409	Methylobacterium	sp.	NA	237
+PhoU	A0A9D5R871	unreviewed	Phosphate-specific transport system accessory protein PhoU	2779355	Ructibacterium	gallinarum	NA	216
+PhoU	A0A2E3TKW5	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026752	Kiritimatiellaceae	bacterium	NA	219
+PhoU	A0A960Z4K8	unreviewed	Phosphate-specific transport system accessory protein PhoU	1869227	bacterium	NA	NA	226
+PhoU	A0A1G1CEB8	unreviewed	Phosphate-specific transport system accessory protein PhoU	1798581	Lentisphaerae	bacterium	RIFOXYB12_FULL_65_16	247
+PhoU	A0A1E4ZKK9	unreviewed	Phosphate-specific transport system accessory protein PhoU	1868283	PVC	group	bacterium (ex Bugula neritina AB1)	215
+PhoU	A0AAU7C5W7	unreviewed	Phosphate-specific transport system accessory protein PhoU	3142938	Limosilactobacillus	allomucosae	NA	248
+PhoU	A0A2K8NR33	unreviewed	Phosphate transport system regulator PhoU	74700	Entomoplasma	freundtii	NA	226
+PhoU	A0A2K8UGW5	unreviewed	Phosphate-specific transport system accessory protein PhoU	1166950	Candidatus	Thiodictyon	syntrophicum	217
+PhoU	A0A9Q9IB09	unreviewed	Phosphate-specific transport system accessory protein PhoU	35754	Dactylosporangium	aurantiacum	NA	214
+PhoU	A0A0H2SF11	unreviewed	PhoU domain-containing protein	1428449	Marinitoga	sp.	1197	241
+PhoU	A0A2V2N0R2	unreviewed	Phosphate-specific transport system accessory protein PhoU	668570	Methanospirillum	lacunae	NA	216
+PhoU	A0A7V1Q235	unreviewed	PhoU domain-containing protein	2052180	Phycisphaerales	bacterium	NA	196
+PhoU	A0A7V0XVW3	unreviewed	Phosphate-specific transport system accessory protein PhoU	1977087	Pseudomonadota	bacterium	NA	230
+PhoU	A0A497GYB5	unreviewed	Phosphate-specific transport system accessory protein PhoU	1906666	Thermoplasmata	archaeon	NA	218
+PhoU	A0A099T1M2	unreviewed	PhoU domain-containing protein	2226	Methanococcoides	methylutens	NA	308
+PhoU	A1K9D8	unreviewed	Phosphate-specific transport system accessory protein PhoU	418699	Azoarcus	sp.	(strain BH72)	237
+PhoU	A0A846PGP9	unreviewed	PhoU domain-containing protein	2026714	Candidatus	Bathyarchaeota	archaeon	186
+PhoU	A0AAF1BMZ2	unreviewed	Phosphate-specific transport system accessory protein PhoU	1232430	Nosocomiicoccus	massiliensis	NA	211
+PhoU	A0A0D6GWD6	unreviewed	PhoU domain-containing protein	1717	Corynebacterium	diphtheriae	NA	250
+PhoU	A0A2E1E1N9	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026734	Dehalococcoidia	bacterium	NA	234
+PhoU	A0A6A8AN23	unreviewed	PhoU domain-containing protein	1906665	archaeon	NA	NA	164
+PhoU	A0A932LZ61	unreviewed	Phosphate-specific transport system accessory protein PhoU	1978231	Acidobacteriota	bacterium	NA	222
+PhoU	A0A346PAP9	unreviewed	Phosphate-specific transport system accessory protein PhoU	2044521	Natrarchaeobaculum	sulfurireducens	NA	225
+PhoU	A0A496B7H1	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026781	Poribacteria	bacterium	NA	228
+PhoU	A0A7C4B2N7	unreviewed	Phosphate-specific transport system accessory protein PhoU	2044939	Clostridia	bacterium	NA	221
+PhoU	A0A7J2Y4F5	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026739	Methanobacteriota	archaeon	NA	234
+PhoU	A0A2N3BGC4	unreviewed	Phosphate-specific transport system accessory protein PhoU	2013667	Alphaproteobacteria	bacterium	HGW-Alphaproteobacteria-4	238
+PhoU	A0A2H5WA72	unreviewed	Phosphate-specific transport system accessory protein PhoU	2035406	bacterium	HR11	NA	228
+PhoU	A0A518SCG4	unreviewed	Phosphate-specific transport system accessory protein PhoU	2599399	Salarchaeum	sp.	JOR-1	225
+PhoU	A0A2G8PDP9	unreviewed	Phosphate-specific transport system accessory protein PhoU	1353262	Synechococcus	sp.	60AY4M2	213
+PhoU	A0A0F3GN02	unreviewed	Phosphate-specific transport system accessory protein PhoU	29290	Candidatus	Magnetobacterium	bavaricum	222
+PhoU	A0A6J4MRV6	unreviewed	Phosphate-specific transport system accessory protein PhoU	203437	uncultured	Gemmatimonadota	bacterium	238
+PhoU	A0A0R1R4S8	unreviewed	Phosphate-specific transport system accessory protein PhoU	1423769	Lacticaseibacillus	manihotivorans	DSM 13343 = JCM 12514	231
+PhoU	A0A7C6BNH8	unreviewed	Phosphate-specific transport system accessory protein PhoU	1898207	Clostridiales	bacterium	NA	216
+PhoU	A0A094SKS5	unreviewed	PhoU domain-containing protein	449393	freshwater	metagenome	NA	217
+PhoU	E8X1W5	unreviewed	Phosphate-specific transport system accessory protein PhoU	1198114	Granulicella	tundricola	(strain ATCC BAA-1859 / DSM 23138 / MP5ACTX9)	225
+PhoU	A0A1Q9K4U5	unreviewed	Phosphate-specific transport system accessory protein PhoU	1261637	Anaerostipes	sp.	992a	216
+PhoU	A0A847LNU3	unreviewed	Phosphate-specific transport system accessory protein PhoU	2049044	Erysipelotrichaceae	bacterium	NA	221
+PhoU	A0A2W4MI33	unreviewed	Phosphate-specific transport system accessory protein PhoU	1883427	Actinomycetes	bacterium	NA	229
+PhoU	A0A6N2SZ52	unreviewed	Phosphate-specific transport system accessory protein PhoU	905011	uncultured	Anaerotruncus	sp.	218
+PhoU	A0A848B9R1	unreviewed	Phosphate-specific transport system accessory protein PhoU	416586	Selenomonas	bovis	NA	222
+PhoU	A0A7C1IUD8	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026724	Chloroflexota	bacterium	NA	212
+PhoU	A0A3A4JTQ4	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026763	Myxococcales	bacterium	NA	223
+PhoU	A0A956SD12	unreviewed	Phosphate-specific transport system accessory protein PhoU	2212470	Eisenbacteria	bacterium	NA	224
+PhoU	A0A952Q608	unreviewed	PhoU domain-containing protein	2052143	Anaerolineae	bacterium	NA	219
+PhoU	A0A651DUB2	unreviewed	Phosphate-specific transport system accessory protein PhoU	2448054	Gemmatimonadales	bacterium	NA	234
+PhoU	A0A3A4JQI5	unreviewed	Phosphate-specific transport system accessory protein PhoU	2035772	Omnitrophica	bacterium	NA	225
+PhoU	A0A934H761	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026724	Chloroflexota	bacterium	NA	230
+PhoU	A0A2U1B430	unreviewed	Phosphate-specific transport system accessory protein PhoU	172901	Victivallis	vadensis	NA	221
+PhoU	A0A374VVV6	unreviewed	Phosphate-specific transport system accessory protein PhoU	2292375	Ruminococcus	sp.	OM06-36AC	215
+PhoU	A0A927C3L2	unreviewed	Phosphate-specific transport system accessory protein PhoU	2760804	Spongiibacter	pelagi	NA	226
+PhoU	A0A1M6ANC6	unreviewed	Phosphate-specific transport system accessory protein PhoU	659425	Thermoclostridium	caenicola	NA	219
+PhoU	A0A7L4PUC7	unreviewed	Phosphate-specific transport system accessory protein PhoU	2184052	Methanomicrobiales	archaeon	NA	216
+PhoU	A0A1F4D580	unreviewed	Phosphate-specific transport system accessory protein PhoU	1797495	Betaproteobacteria	bacterium	RIFCSPLOWO2_12_FULL_62_13	235
+PhoU	A0A9X2EHI5	unreviewed	Phosphate-specific transport system accessory protein PhoU	2950949	Sphingomicrobium	sediminis	NA	237
+PhoU	A0A6P2BHN0	unreviewed	Phosphate-specific transport system accessory protein PhoU	1913989	Gammaproteobacteria	bacterium	NA	237
+PhoU	A0A1W9VK52	unreviewed	Phosphate-specific transport system accessory protein PhoU	1972455	Candidatus	Cloacimonetes	bacterium 4572_65	213
+PhoU	A0A351JWS1	unreviewed	Phosphate-specific transport system accessory protein PhoU	2053493	Candidatus	Acetothermia	bacterium	221
+PhoU	A0A0S8KLS1	unreviewed	Phosphate-specific transport system accessory protein PhoU	1703388	Anaerolineae	bacterium	SM23_84	229
+PhoU	A0A1M6KBP2	unreviewed	Phosphate-specific transport system accessory protein PhoU	1121302	Clostridium	cavendishii	DSM 21758	218
+PhoU	A0A133KEC2	unreviewed	PhoU domain-containing protein	33036	Anaerococcus	tetradius	NA	205
+PhoU	A0A9D1KEQ6	unreviewed	Phosphate-specific transport system accessory protein PhoU	2840724	Candidatus	Caccovicinus	merdipullorum	220
+PhoU	A0A941KH46	unreviewed	Phosphate-specific transport system accessory protein PhoU	1913988	Alphaproteobacteria	bacterium	NA	233
+PhoU	A0A7V5FSN2	unreviewed	Phosphate-specific transport system accessory protein PhoU	2053307	Desulfobulbaceae	bacterium	NA	221
+PhoU	A0A533MNF0	unreviewed	PhoU domain-containing protein	2056317	ANME-2	cluster	archaeon	250
+PhoU	A0A3C1SQ47	unreviewed	Phosphate-specific transport system accessory protein PhoU	2053538	Candidatus	Competibacteraceae	bacterium	250
+PhoU	A0A095ZL82	unreviewed	Phosphate-specific transport system accessory protein PhoU	1230734	Clostridiales	bacterium	S5-A14a	221
+PhoU	A0A2V7YFU4	unreviewed	Phosphate-specific transport system accessory protein PhoU	1978231	Acidobacteriota	bacterium	NA	225
+PhoU	A0A7Y8TI94	unreviewed	Phosphate-specific transport system accessory protein PhoU	1898104	Bacteroidota	bacterium	NA	223
+PhoU	A0A2E7JJW0	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026742	Gemmatimonadota	bacterium	NA	248
+PhoU	E1R660	unreviewed	Phosphate-specific transport system accessory protein PhoU	573413	Sediminispirochaeta	smaragdinae	(strain DSM 11293 / JCM 15392 / SEBR 4228)	222
+PhoU	A0A938UC40	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026735	Deltaproteobacteria	bacterium	NA	228
+PhoU	A0A3N5ZRU3	unreviewed	Phosphate-specific transport system accessory protein PhoU	2058214	Rummeliibacillus	sp.	TYF005	218
+PhoU	A0A2H5Y6L4	unreviewed	Phosphate-specific transport system accessory protein PhoU	2035417	Candidatus	Thermoflexus	japonica	218
+PhoU	A0A532U9V9	unreviewed	PhoU domain-containing protein	2012999	bacterium	(candidate	division B38) B3_B38	218
+PhoU	A0A1E7I4W4	unreviewed	Phosphate-specific transport system accessory protein PhoU	1869297	Desulfovibrio	sp.	S3730MH75	226
+PhoU	A0A661ENT8	unreviewed	Phosphate-specific transport system accessory protein PhoU	1913989	Gammaproteobacteria	bacterium	NA	231
+PhoU	A0A6B2JU91	unreviewed	Phosphate-specific transport system accessory protein PhoU	2705421	Pseudoroseicyclus	tamaricis	NA	242
+PhoU	A0A223ZH10	unreviewed	Phosphate-specific transport system accessory protein PhoU	2017966	Methanothermobacter	sp.	EMTCatA1	219
+PhoU	A0A524JCP8	unreviewed	Phosphate-specific transport system accessory protein PhoU	2073117	Anaerolineales	bacterium	NA	218
+PhoU	A0A970Z1U3	unreviewed	Phosphate-specific transport system accessory protein PhoU	2053306	Ignavibacteria	bacterium	NA	231
+PhoU	A0A962GKT0	unreviewed	Phosphate-specific transport system accessory protein PhoU	2006849	Lysobacterales	bacterium	NA	236
+PhoU	A0A1H6QJI2	unreviewed	Phosphate-specific transport system accessory protein PhoU	322505	Sharpea	azabuensis	NA	216
+PhoU	A0A401FRN2	unreviewed	Phosphate-specific transport system accessory protein PhoU	45657	Desulfonema	ishimotonii	NA	219
+PhoU	A0A969L9D4	unreviewed	Phosphate-specific transport system accessory protein PhoU	2562117	Chloroflexaceae	bacterium	NA	213
+PhoU	A0A2I6SAR5	unreviewed	Phosphate-specific transport system accessory protein PhoU	2067960	Pseudazoarcus	pumilus	NA	234
+PhoU	A0A7Y8HUJ7	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026887	Nitrospirota	bacterium	NA	223
+PhoU	A0A938P8H1	unreviewed	Phosphate-specific transport system accessory protein PhoU	1932692	Lentisphaerota	bacterium	NA	221
+PhoU	A0A9D5VQS3	unreviewed	Phosphate-specific transport system accessory protein PhoU	2044940	Desulfobacterales	bacterium	NA	220
+PhoU	T0T1W3	unreviewed	PhoU domain-containing protein	1353529	Bacteriovorax	sp.	BSW11_IV	205
+PhoU	A0A839A786	unreviewed	Phosphate-specific transport system accessory protein PhoU	2748684	Ruoffia	halotolerans	NA	218
+PhoU	A0A7C5QTL8	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026735	Deltaproteobacteria	bacterium	NA	223
+PhoU	A0A0C2UEG0	unreviewed	Phosphate-specific transport system accessory protein PhoU	272627	Paramagnetospirillum	magnetotacticum	MS-1	231
+PhoU	A0A918SGY5	unreviewed	Phosphate-specific transport system accessory protein PhoU	680283	Salinimicrobium	marinum	NA	223
+PhoU	A0A1G8MNE2	unreviewed	Phosphate-specific transport system accessory protein PhoU	930129	Alteribacillus	bidgolensis	NA	219
+PhoU	A0A3E0PWD4	unreviewed	Phosphate-specific transport system accessory protein PhoU	1883427	Actinomycetes	bacterium	NA	234
+PhoU	A0A1L2ZMK2	unreviewed	Phosphate-specific transport system accessory protein PhoU	556325	Neomicrococcus	aestuarii	NA	223
+PhoU	A0A380LJV8	unreviewed	Phosphate-specific transport system accessory protein PhoU	1323	Faecalicoccus	pleomorphus	NA	218
+PhoU	A0A7C6QDT3	unreviewed	Phosphate-specific transport system accessory protein PhoU	2044939	Clostridia	bacterium	NA	219
+PhoU	A0A2A4LPR4	unreviewed	Phosphate-specific transport system accessory protein PhoU	1909294	Hyphomicrobiales	bacterium	NA	244
+PhoU	A0A645B1R8	unreviewed	PhoU domain-containing protein	1076179	bioreactor	metagenome	NA	197
+PhoU	A0A7K3ZLF0	unreviewed	Phosphate-specific transport system accessory protein PhoU	2268204	Thermoplasmatales	archaeon	NA	216
+PhoU	A0A5C7EYI6	unreviewed	Phosphate-specific transport system accessory protein PhoU	2602750	Pelomicrobium	methylotrophicum	NA	239
+PhoU	A0A1T0CE13	unreviewed	Phosphate-specific transport system accessory protein PhoU	90241	Moraxella	lincolnii	NA	236
+PhoU	A0A961HU19	unreviewed	PhoU domain-containing protein	2026757	Leptospiraceae	bacterium	NA	247
+PhoU	A0A3C0CXR1	unreviewed	Phosphate-specific transport system accessory protein PhoU	2033014	Armatimonadota	bacterium	NA	222
+PhoU	A0A7J3F1P7	unreviewed	PhoU domain-containing protein	2026714	Candidatus	Bathyarchaeota	archaeon	382
+PhoU	A0A140L5X9	unreviewed	Phosphate-specific transport system accessory protein PhoU	520762	Thermotalea	metallivorans	NA	216
+PhoU	A0A8E2X6Z5	unreviewed	PhoU domain-containing protein	909613	Actinokineospora	spheciospongiae	NA	217
+PhoU	A0A9E1IVK7	unreviewed	Phosphate-specific transport system accessory protein PhoU	2024844	Nitrospina	sp.	NA	227
+PhoU	A0A543HYG8	unreviewed	Phosphate-specific transport system accessory protein PhoU	244735	Klugiella	xanthotipulae	NA	213
+PhoU	A0A520Y607	unreviewed	PhoU domain-containing protein	1891229	Pseudomonadales	bacterium	NA	291
+PhoU	A0A2V2SB31	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026799	Verrucomicrobiota	bacterium	NA	224
+PhoU	A0A951FIV9	unreviewed	PhoU domain-containing protein	2026724	Chloroflexota	bacterium	NA	152
+PhoU	A0A0F7K1A5	unreviewed	Phosphate-specific transport system accessory protein PhoU	1543721	Sedimenticola	thiotaurini	NA	242
+PhoU	A0A2D6M3Y4	unreviewed	PhoU domain-containing protein	1898112	Rhodospirillaceae	bacterium	NA	264
+PhoU	A0A7G5Z1P4	unreviewed	PhoU domain-containing protein	653931	Sphingomonas	alpina	NA	262
+PhoU	A0AAV6CGN1	unreviewed	Phosphate-specific transport system accessory protein PhoU	2072417	Candidatus	Methylomirabilota	bacterium	231
+PhoU	A0A1F8NL13	unreviewed	Phosphate-specific transport system accessory protein PhoU	1797639	Chloroflexi	bacterium	RBG_16_47_49	220
+PhoU	A0A2D5S595	unreviewed	Phosphate-specific transport system accessory protein PhoU	2026779	Planctomycetaceae	bacterium	NA	235
+PhoU	A0A1V5ZS54	unreviewed	Phosphate-specific transport system accessory protein PhoU	1852850	Candidatus	Latescibacteria	bacterium ADurb.Bin168	225
+PitR	A0A0H3K7D8	unreviewed	Uncharacterized protein	426430	Staphylococcus	aureus	(strain Newman)	205
+PhoU	A0A0H3K808	unreviewed	Phosphate-specific transport system accessory protein PhoU	426430	Staphylococcus	aureus	(strain Newman)	213

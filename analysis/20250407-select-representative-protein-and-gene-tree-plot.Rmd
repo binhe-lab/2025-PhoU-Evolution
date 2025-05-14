@@ -187,24 +187,119 @@ write.fasta(sequences = tree_seqs,
             file.out = "../data/fasta-sequences/20250425-select-proteins-for-tree.fa")
 ```
 
+To determine if the resulting gene tree pattern is robust to the choice of sequences, I will repeat the above sampling process to generate two more randomly sampled sequences and perform the same gene tree reconstruction for them.
+```{r}
+# repeat the sampling and exporting process for two more sets of sequences
+# randomly select 100 and 200 proteins from the PitR and PhoU sets, respectively
+set.seed(20250408)
+# PitR
+pitr_representative_2 <- clustered_seq_info |>
+  filter(group == "PitR") |>
+  filter(!Accession %in% staph_aureus_unip_ids) |>
+  slice_sample(n = 100)
+# PhoU
+phou_representative_2 <- clustered_seq_info |>
+  filter(group == "PhoU") |>
+  filter(!Accession %in% staph_aureus_unip_ids) |>
+  slice_sample(n = 200)
+# Combine the two with the S. aureus sequences
+seq_for_tree_2 <- bind_rows(
+  pitr_representative_2, phou_representative_2,
+  # add the _S. aureus_ sequences
+  clustered_seq_info |>
+    filter(Accession %in% staph_aureus_unip_ids)) |>
+  # remove the NptA sequences
+  filter(group != "NptA")
+# Write the selected sequences to a tsv file
+write_tsv(seq_for_tree_2, 
+          file = "../data/fasta-sequences/20250425-select-proteins-for-tree-2.tsv")
+# Filter sequences: get only those whose name matches selected accessions
+tree_seqs_acc_2 <- seq_for_tree_2$Accession
+tree_seqs_2 <- grouped_seqs[which(grouped_seqs_acc %in% tree_seqs_acc_2)]
+sprintf("Selected %d sequences from %d total", length(tree_seqs_2), length(grouped_seqs))
+# Convert list to a named character vector for renaming
+new_names_tree_2 <- seq_for_tree_2 |>
+  mutate(new_name = paste(Accession, group, Genus, Species, sep = " ")) |>
+  select(Accession, new_name) |>
+  deframe()
+
+# get the names of the selected sequences
+tree_seqs_acc_2 <- getName(tree_seqs_2) |> str_split("\\|", simplify = TRUE)
+tree_seqs_acc_2 <- tree_seqs_acc_2[,1]
+
+# check to make sure that the selected sequences are in the new names
+all(tree_seqs_acc_2 %in% names(new_names_tree_2))
+# export the selected sequences to a fasta file
+write.fasta(sequences = tree_seqs_2, 
+            names = new_names_tree_2[tree_seqs_acc_2], 
+            file.out = "../data/fasta-sequences/20250425-select-proteins-for-tree-2.fa")
+```
+3rd set
+```{r}
+# repeat the sampling and exporting process for two more sets of sequences
+# randomly select 100 and 200 proteins from the PitR and PhoU sets, respectively
+set.seed(20250409)
+# PitR
+pitr_representative_3 <- clustered_seq_info |>
+  filter(group == "PitR") |>
+  filter(!Accession %in% staph_aureus_unip_ids) |>
+  slice_sample(n = 100)
+# PhoU
+phou_representative_3 <- clustered_seq_info |>
+  filter(group == "PhoU") |>
+  filter(!Accession %in% staph_aureus_unip_ids) |>
+  slice_sample(n = 200)
+# Combine the two with the S. aureus sequences
+seq_for_tree_3 <- bind_rows(
+  pitr_representative_3, phou_representative_3,
+  # add the _S. aureus_ sequences
+  clustered_seq_info |>
+    filter(Accession %in% staph_aureus_unip_ids)) |>
+  # remove the NptA sequences
+  filter(group != "NptA")
+# Write the selected sequences to a tsv file
+write_tsv(seq_for_tree_3, 
+          file = "../data/fasta-sequences/20250425-select-proteins-for-tree-3.tsv")
+# Filter sequences: get only those whose name matches selected accessions
+tree_seqs_acc_3 <- seq_for_tree_3$Accession
+tree_seqs_3 <- grouped_seqs[which(grouped_seqs_acc %in% tree_seqs_acc_3)]
+sprintf("Selected %d sequences from %d total", length(tree_seqs_3), length(grouped_seqs))
+# Convert list to a named character vector for renaming
+new_names_tree_3 <- seq_for_tree_3 |>
+  mutate(new_name = paste(Accession, group, Genus, Species, sep = " ")) |>
+  select(Accession, new_name) |>
+  deframe()
+
+# get the names of the selected sequences
+tree_seqs_acc_3 <- getName(tree_seqs_3) |> str_split("\\|", simplify = TRUE)
+tree_seqs_acc_3 <- tree_seqs_acc_3[,1]
+
+# check to make sure that the selected sequences are in the new names
+all(tree_seqs_acc_3 %in% names(new_names_tree_3))
+# export the selected sequences to a fasta file
+write.fasta(sequences = tree_seqs_3, 
+            names = new_names_tree_3[tree_seqs_acc_3], 
+            file.out = "../data/fasta-sequences/20250425-select-proteins-for-tree-3.fa")
+```
+
 
 ## Plot gene tree
 The above selected protein sequences were aligned using MAFFT V7.526 with the E-INS-i algorithm optimized for divergent sequences with multiple conserved domains. I also tried MSAprobs and the result looked superficially similar.
 
 Gene tree reconstruction was performed using RAXML v8.2.12 on the Galaxy server. I used "LG+G" as the protein substitution model and matrix. I chose the `-f` option to run a rapid bootstrap, but the result is not in the output. If we want the bootstrap values, I can get it by running the program locally.
 
-First import the species tree
+### LG+G model
 ```{r}
-gene_tree <- read.tree("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree.nwk") %>% 
+gene_tree_LG1 <- read.tree("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree.nwk") %>% 
   as_tibble() %>% 
   #mutate(label = gsub("_", " ", label)) %>% 
   left_join(seq_for_tree, by = c("label" = "Accession")) %>% 
   as.treedata()
 ```
 
-plot the tree
+plot the tree, with labels for the _S. aureus_ sequences
 ```{r}
-p.tree <- ggtree(gene_tree, layout = "equal_angle") + #xlim(0,2.2) + scale_y_reverse() +
+ggtree(gene_tree_LG1, layout = "equal_angle") + #xlim(0,2.2) + scale_y_reverse() +
   geom_tiplab(aes(subset = label %in% c("A0A0H3K808", "A0A0H3K7D8"), 
                   angle = angle, label = paste("S. aureus", group, sep = " ")), 
               size = 3.5, geom = "label") +
@@ -216,24 +311,42 @@ p.tree <- ggtree(gene_tree, layout = "equal_angle") + #xlim(0,2.2) + scale_y_rev
   theme(legend.position = c(0.12, 0.13),
         legend.title = element_text(size = rel(1.2)),
         legend.text = element_text(size = rel(1.2)))
-p.tree
-ggsave("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree.pdf", 
-       p.tree, width = 8, height = 8)
+ggsave("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree.png", 
+       width = 8, height = 8)
 ```
 
+plot the tree, no labels for the _S. aureus_ sequences
+```{r}
+ggtree(gene_tree, layout = "equal_angle") + #xlim(0,2.2) + scale_y_reverse() +
+  #geom_tiplab(aes(subset = label %in% c("A0A0H3K808", "A0A0H3K7D8"), 
+  #                angle = angle, label = paste("S. aureus", group, sep = " ")), 
+  #            size = 3.5, geom = "label") +
+  #geom_treescale(x = 0, width = 0.2, linesize = 1.2) +
+  geom_tippoint(aes(color = group), size = 1.5) +
+  scale_color_manual("Group", values =  c("PhoU" = "#6a5acd",
+                                 "PitR" = "#d14949")) +
+  #guides(color = guide_legend(byrow = TRUE)) +
+  theme(legend.position = c(0.12, 0.13),
+        legend.title = element_text(size = rel(1.2)),
+        legend.text = element_text(size = rel(1.2)))
+ggsave("../output/gene-tree/20250512-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree-no_label.png", 
+       width = 8, height = 8)
+```
+
+### Dayhoff model
 I made a second tree using `PROTCAT` as the model and `DAYHOFF` as the matrix. I'd like to see whether the result is robust to these choices.
 
 ```{r}
-gene_tree_2 <- read.tree("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTCAT-Dayhoff-best-ML-tree.nwk") %>% 
+gene_tree_DH <- read.tree("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTCAT-Dayhoff-best-ML-tree.nwk") %>% 
   as_tibble() %>% 
   #mutate(label = gsub("_", " ", label)) %>% 
   left_join(seq_for_tree, by = c("label" = "Accession")) %>% 
   as.treedata()
 ```
 
-plot the tree
+plot the tree, with labels for the _S. aureus_ sequences
 ```{r}
-p.tree.2 <- ggtree(gene_tree_2, layout = "equal_angle") + #xlim(0,2.2) + scale_y_reverse() +
+ggtree(gene_tree_DH, layout = "equal_angle") + #xlim(0,2.2) + scale_y_reverse() +
   geom_tiplab(aes(subset = label %in% c("A0A0H3K808", "A0A0H3K7D8"), 
                   angle = angle, label = paste("S. aureus", group, sep = " ")), 
               size = 3.5, geom = "label") +
@@ -245,7 +358,80 @@ p.tree.2 <- ggtree(gene_tree_2, layout = "equal_angle") + #xlim(0,2.2) + scale_y
   theme(legend.position = c(0.12, 0.13),
         legend.title = element_text(size = rel(1.2)),
         legend.text = element_text(size = rel(1.2)))
-p.tree.2
-ggsave("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTCAT-Dayhoff-best-ML-tree.pdf", 
-       p.tree.2, width = 8, height = 8)
+ggsave("../output/gene-tree/20250426-PhoU-PitR-select-raxml-PROTCAT-Dayhoff-best-ML-tree.png", 
+       width = 8, height = 8)
+```
+
+plot the tree, no labels
+```{r}
+ggtree(gene_tree_DH, layout = "equal_angle") + #xlim(0,2.2) + scale_y_reverse() +
+  #geom_tiplab(aes(subset = label %in% c("A0A0H3K808", "A0A0H3K7D8"), 
+  #                angle = angle, label = paste("S. aureus", group, sep = " ")), 
+  #            size = 3.5, geom = "label") +
+  #geom_treescale(x = 0, width = 0.2, linesize = 1.2) +
+  geom_tippoint(aes(color = group), size = 1.5) +
+  scale_color_manual("Group", values =  c("PhoU" = "#6a5acd",
+                                 "PitR" = "#d14949")) +
+  #guides(color = guide_legend(byrow = TRUE)) +
+  theme(legend.position = c(0.12, 0.13),
+        legend.title = element_text(size = rel(1.2)),
+        legend.text = element_text(size = rel(1.2)))
+ggsave("../output/gene-tree/20250512-PhoU-PitR-select-raxml-PROTCAT-Dayhoff-best-ML-tree-no_label.png", 
+       width = 8, height = 8)
+```
+
+### LG+G model, set 2
+Read tree and add sequence information
+```{r}
+gene_tree_LG2 <- read.tree("../output/gene-tree/20250514-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree-2.nwk") %>% 
+  as_tibble() %>% 
+  #mutate(label = gsub("_", " ", label)) %>% 
+  left_join(seq_for_tree_2, by = c("label" = "Accession")) %>% 
+  as.treedata()
+```
+
+plot the tree, with labels for the _S. aureus_ sequences
+```{r}
+ggtree(gene_tree_LG2, layout = "equal_angle") + #xlim(0,2.2) + scale_y_reverse() +
+  geom_tiplab(aes(subset = label %in% c("A0A0H3K808", "A0A0H3K7D8"), 
+                  angle = angle, label = paste("S. aureus", group, sep = " ")), 
+              size = 3.5, geom = "label") +
+  #geom_treescale(x = 0, width = 0.2, linesize = 1.2) +
+  geom_tippoint(aes(color = group), size = 1.5) +
+  scale_color_manual("Group", values =  c("PhoU" = "#6a5acd",
+                                 "PitR" = "#d14949")) +
+  #guides(color = guide_legend(byrow = TRUE)) +
+  theme(legend.position = c(0.12, 0.13),
+        legend.title = element_text(size = rel(1.2)),
+        legend.text = element_text(size = rel(1.2)))
+ggsave("../output/gene-tree/20250514-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree-2.png", 
+       width = 8, height = 8)
+```
+
+### LG+G model, set 3
+Read tree and add sequence information
+```{r}
+gene_tree_LG3 <- read.tree("../output/gene-tree/20250514-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree-3.nwk") %>% 
+  as_tibble() %>% 
+  #mutate(label = gsub("_", " ", label)) %>% 
+  left_join(seq_for_tree_3, by = c("label" = "Accession")) %>% 
+  as.treedata()
+```
+
+plot the tree, with labels for the _S. aureus_ sequences
+```{r}
+ggtree(gene_tree_LG3, layout = "equal_angle") + #xlim(0,2.2) + scale_y_reverse() +
+  geom_tiplab(aes(subset = label %in% c("A0A0H3K808", "A0A0H3K7D8"), 
+                  angle = angle, label = paste("S. aureus", group, sep = " ")), 
+              size = 3.5, geom = "label") +
+  #geom_treescale(x = 0, width = 0.2, linesize = 1.2) +
+  geom_tippoint(aes(color = group), size = 1.5) +
+  scale_color_manual("Group", values =  c("PhoU" = "#6a5acd",
+                                 "PitR" = "#d14949")) +
+  #guides(color = guide_legend(byrow = TRUE)) +
+  theme(legend.position = c(0.12, 0.13),
+        legend.title = element_text(size = rel(1.2)),
+        legend.text = element_text(size = rel(1.2)))
+ggsave("../output/gene-tree/20250514-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree-3.png", 
+       width = 8, height = 8)
 ```
