@@ -1,10 +1,14 @@
-# General notes
-Used Galaxy to perform MAFFT alignment and RAxML tree reconstruction. The history can be assessed here:
+---
+title: notes on how I used Galaxy to reconstruct the gene tree
+author: Bin He
+date: 2025-11-30
+---
+
+The analysis history can be accessed here:
 
 https://usegalaxy.org/u/binhe-lab/h/phou-gene-tree
 
-# 2025-04-26 analyses
-## Methods
+## First analysis, 2025-04-26
 Didn't do bootstrapping. Sample command (copied from Galaxy):
 
 ```bash
@@ -23,15 +27,7 @@ Note a couple of differences:
 1. Because I didn't change the Galaxy default of `-N 1`, which is an alternative way of writing `-# 1`, bootstrapping is effectively turned off.
 1. Some of the parameters only in the Galaxy command are actually defaults in RAxML, such as `-B 0.03 -c 25 -f D -K GTR -W 100`
 
-## Results
-`20250426-PhoU-PitR-select-raxml-PROTCAT-Dayhoff-best-ML-tree.nwk`: using Galaxy version of RAXML v8.2.12, PROTCAT model, Dayhoff matrix. Final log likelihood score best ML tree = -134344
-
-`20250426-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree.nwk`: same as above but using PROTGAMMA model with LG matrix, also ran bootstrap using the rapid bootstrap option. final log likelihood score of best ML tree = -131269
-
-`20250514-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree-2.nwk` and related files: repeat the previous analysis with two additional randomly sampled subset of sequences
-
-# 2025-11-30 analyses
-## Method
+## Second analysis, 2025-11-20
 Added bootstrapping at the reviewer's request.
 
 Sample command:
@@ -41,8 +37,3 @@ raxmlHPC-PTHREADS -T 16 -s /jetstream2/scratch/main/jobs/72980314/inputs/dataset
 ```
 
 - `-N 500 -x 12345` plus `-f a` will instruct the program to perform rapid bootstrapping with 500 replicates
-
-## Result
-`20251202-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree-1.nwk`: using Galaxy version of RAXML v8.2.12, PROTGAMMA model, LG matrix. Final log likelihood score best ML tree = -131243.7
-
-`20251202-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree-2/3.nwk` and related files: repeat the previous analysis with two additional randomly sampled subset of sequences.
