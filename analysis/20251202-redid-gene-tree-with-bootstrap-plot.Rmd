@@ -105,25 +105,30 @@ gene_tree_LG1 <- read.newick(
   as.treedata()
 ```
 
+set common parameters
+```{r}
+tip_colors = c("PhoU" = "#cdb45a", "PitR" = "#49b8d1")
+```
+
 plot the tree, with labels for the _S. aureus_ sequences
 ```{r}
 ggtree(gene_tree_LG1, layout = "equal_angle") +
   geom_tiplab(aes(subset = label %in% c("A0A0H3K808", "A0A0H3K7D8"), 
-                  angle = angle, label = paste("S. aureus", group, sep = " ")), 
+                  angle = angle, 
+                  label = group), 
               size = 3.5, geom = "label", label.size = 0, hjust = -0.1) +
   #geom_treescale(x = 0, width = 0.2, linesize = 1.2) +
   geom_tippoint(aes(color = group), size = 1.5) +
   geom_label(aes(label = ifelse(support >= 85, support, NA)), 
             hjust = -0.4, color = "gray10", size = 3, 
             fill = rgb(0,0,0,0.1), label.size = 0) +
-  scale_color_manual("Group", values =  c("PhoU" = "#6a5acd",
-                                 "PitR" = "#d14949")) +
+  scale_color_manual("Group", values = tip_colors) +
   #guides(color = guide_legend(byrow = TRUE)) +
   theme(legend.position = c(0.12, 0.13),
         legend.title = element_text(size = rel(1.2)),
-        legend.text = element_text(size = rel(1.2)))
-ggsave("../output/gene-tree/20251202-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree.png", 
-       width = 8, height = 8)
+        legend.text = element_text(size = rel(1.2)),
+       )
+ggsave("../output/gene-tree/20251202-PhoU-PitR-select-raxml-PROTGAMMA-LG-best-ML-tree.pdf",  width = 8, height = 8)
 ```
 
 ### LG+G model, set 2
